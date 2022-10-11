@@ -2,7 +2,7 @@ import React from "react";
 import { Controller } from "react-hook-form";
 import { FormField, Label } from "./form.style";
 
-export const TextField = React.forwardRef(
+const FormTextField = React.forwardRef(
   ({ label, type, name, control, onChange, className, error }, ref) => {
     return (
       <FormField>
@@ -36,3 +36,7 @@ export const TextField = React.forwardRef(
     );
   }
 );
+
+FormTextField.displayName = "MyFormTextField";
+
+export default FormTextField;
